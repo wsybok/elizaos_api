@@ -1,1 +1,1 @@
-web: npm start 
+web: node eliza-server/server.js
