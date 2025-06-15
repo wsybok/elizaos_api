@@ -1,1 +1,1 @@
-web: node eliza-server/server.js
+web: node dist/server.js
