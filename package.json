@@ -2,9 +2,9 @@
   "name": "elizaos-oracle",
   "version": "1.0.0",
   "description": "ElizaOS Oracle API for AI Prediction Markets",
-  "main": "server.ts",
+  "main": "dist/server.js",
   "scripts": {
-    "start": "ts-node server.ts",
+    "start": "node dist/server.js",
     "dev": "ts-node --watch server.ts",
     "build": "tsc",
     "test": "echo \"No tests specified\" && exit 0"
@@ -29,7 +29,7 @@
     "typescript": "^5.2.2"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "22.x"
   },
   "keywords": [
     "elizaos",
