@@ -1,43 +1,42 @@
 {
-  "name": "elizaos-oracle",
+  "name": "ai-prediction-market",
   "version": "1.0.0",
-  "description": "ElizaOS Oracle API for AI Prediction Markets",
-  "main": "dist/server.js",
+  "description": "AI Prediction Market powered by ElizaOS and Chainlink on Avalanche Fuji",
+  "main": "index.js",
   "scripts": {
-    "start": "node dist/server.js",
-    "dev": "ts-node server.ts",
-    "build": "tsc",
-    "heroku-postbuild": "npm run build",
-    "test": "echo \"No tests specified\" && exit 0"
-  },
-  "dependencies": {
-    "@elizaos/core": "^0.1.7",
-    "@elizaos/plugin-node": "^0.1.7",
-    "express": "^4.18.2",
-    "cors": "^2.8.5",
-    "express-rate-limit": "^7.1.5",
-    "dotenv": "^16.3.1",
-    "uuid": "^9.0.1",
-    "node-fetch": "^3.3.2"
-  },
-  "devDependencies": {
-    "@types/express": "^4.17.21",
-    "@types/cors": "^2.8.17",
-    "@types/node": "^20.9.0",
-    "@types/uuid": "^9.0.7",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
+    "start": "node eliza-server/server.js",
+    "heroku-postbuild": "npm run build"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "18.x",
+    "npm": "9.x"
   },
   "keywords": [
+    "blockchain",
+    "prediction-market",
+    "chainlink",
     "elizaos",
-    "oracle",
-    "ai",
-    "prediction-markets",
-    "blockchain"
+    "ai-oracle",
+    "avalanche",
+    "fuji"
   ],
   "author": "AI Prediction Market Team",
-  "license": "MIT"
-} 
+  "license": "MIT",
+  "devDependencies": {
+    "@chainlink/contracts": "^0.6.1",
+    "@chainlink/env-enc": "^1.0.5",
+    "@chainlink/functions-toolkit": "^0.3.2",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^1.1.1",
+    "@openzeppelin/contracts": "^4.9.0",
+    "hardhat": "^2.17.0",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.5"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "dotenv": "^16.5.0",
+    "ethers": "^6.8.1",
+    "express": "^4.18.2"
+  }
+}
